@@ -44,7 +44,7 @@ if (!empty($_SESSION['current_user'])) {
         <h1>Danh sách <?= $config_title ?></h1>
         <div class="listing-items">
             
-       
+            <a href="order_printing.php?id=<?=$row['id']?>" target="_blank">In</a>       
             <ul>
                 <li class="listing-item-heading">
                     <div class="listing-prop listing-id">ID</div>
