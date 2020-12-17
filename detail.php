@@ -23,7 +23,7 @@ and open the template in the editor.
             <h2>Chi tiết sản phẩm</h2>
             <div id="product-detail">
                 <div id="product-img">
-                    <img src="<?= $product['mage'] ?>" />
+                    <img src="<?= $product['image'] ?>" />
                 </div>
                 <div id="product-info">
                     <h1><?= $product['name'] ?></h1>
