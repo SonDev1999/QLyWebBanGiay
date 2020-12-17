@@ -16,7 +16,8 @@ if (!empty($_SESSION['current_user'])) {
 						$error = "Bạn phải nhập mật khẩu";
 					} elseif (empty($_POST['re_password'])) {
 						$error = "Bạn phải nhập xác nhận mật khẩu";
-						
+					} elseif ($_POST['password'] != $_POST['re_password']) {
+						$error = "Mật khẩu xác nhận không khớp";	
 					} 
 					if (!isset($error)) {
 						$checkExistUser = mysqli_query($con, "SELECT * FROM `user` WHERE `username` = '".$_POST['username']."'  AND id != ".$_GET['id']);
