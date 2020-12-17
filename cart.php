@@ -27,7 +27,11 @@ and open the template in the editor.
                 foreach ($_POST['quantity'] as $id => $quantity) {
                     if ($quantity == 0) {
                         unset($_SESSION["cart"][$id]);
-                    } else {
+                    } else if($quantity < 0){   
+                       echo "Số lượng sản phẩm không được âm";   
+                       exit;}
+
+			else {
                         if (!isset($_SESSION["cart"][$id])) {
                             $_SESSION["cart"][$id] = 0;
                         }
